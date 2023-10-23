@@ -5,32 +5,21 @@
 //  Created by Viktor on 2023-10-22.
 //
 
-import XCTest
-@testable import LittleLemonTestProject
 
-final class LittleLemonTestProjectTests: XCTestCase {
+    import XCTest
+    @testable import LittleLemonTestProject
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    class MenuItemTests: XCTestCase {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        func testMenuItemTitle() {
+            let menuItem = MenuItem(title: "Sample Title", ingredients: [.chocolate], category: .food, price: 1299, ordersCount: 0)
+            XCTAssertEqual(menuItem.title, "Sample Title", "Menu item title should match the initialized value.")
+        }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        func testMenuItemIngredients() {
+            let menuItem = MenuItem(title: "Sample Title", ingredients: [.chocolate], category: .food, price: 1299, ordersCount: 0)
+            XCTAssertEqual(menuItem.ingredients, [.chocolate], "Menu item ingredients should match the initialized value.")
         }
     }
 
-}
+
