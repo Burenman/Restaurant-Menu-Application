@@ -9,6 +9,6 @@ Features:
 
 
 Project Details: 
-Framework: SwiftUI
-Architecture: MVVM
-Development time: 2 hours
+- Framework: SwiftUI
+- Architecture: MVVM
+- Development time: 2 hours
